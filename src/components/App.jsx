@@ -12,7 +12,7 @@ class App extends Component {
                 <Provider store={store}>
                     <Router>
                         <Route path="/">
-                            <Route path="/login" component={Login}/>
+                            <Route exact={true} path="/" component={Login}/>
                             {/*<Redirect from="/" to="/login"/>*/}
                         </Route>
                     </Router>

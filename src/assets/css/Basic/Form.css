@@ -40,8 +40,14 @@
     transition: all 0.3 ease;
     cursor: pointer;
 }
+button.youtube-btn{
+    background: #EF3B3A;
+}
 .form button:hover,.form button:active,.form button:focus {
     background: #43A047;
+}
+button.youtube-btn:hover, button.youtube-btn:active,button.youtube-btn:focus {
+    background: rgba(243, 64, 63, 0.83);
 }
 .form .message {
     margin: 15px 0 0;
@@ -97,4 +103,8 @@ body {
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.margin15 {
+    margin: 15px;
 }

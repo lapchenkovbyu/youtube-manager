@@ -10,19 +10,27 @@ class Login extends Component {
                 {
                     name: 'Login',
                     type: 'text',
-                    placeholder: 'login'
+                    placeholder: 'login',
+                    ref: (input) => { this.login = input }
                 },
                 {
                     name: 'Password',
                     type: 'password',
-                    placeholder: 'password'
+                    placeholder: 'password',
+                    ref: (input) => { this.password = input }
                 },
             ],
             buttons: [
                 {
                     name: 'login',
                     type: 'button',
-                    onClick: this.resolveBtnClick
+                    onClick: this.resolveLoginClick
+                },
+                {
+                    name: 'login with YouTube',
+                    type: 'button',
+                    className: 'youtube-btn',
+                    onClick: this.resolveYoutubeLoginClick
                 }
             ]
         };
@@ -41,8 +49,12 @@ class Login extends Component {
         )
     }
 
-    static resolveBtnClick() {
-        console.log('success!!!!!11');
+    static resolveLoginClick() {
+        console.log(this.login, this.password);
+    }
+
+    static resolveYoutubeLoginClick() {
+        console.log('YouTube login');
     }
 }
 
